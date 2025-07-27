@@ -2,7 +2,7 @@
 
 A PyQt5 desktop application to calculate download times based on file size and internet speed.
 
-![Down Clock Logo](https://i.ibb.co/RTYT6b0g/ico.png)
+![Down Clock Logo](https://i.ibb.co/RTYT6b0g/ico.png){width=200}
 
 ## Screenshot
 <div style="display: flex; justify-content: space-between;">
