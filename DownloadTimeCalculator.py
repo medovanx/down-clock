@@ -28,7 +28,9 @@ def sizeToBytes(size, units):
 
 def speedToBytes(speed, units):
     units = units.lower()
-    if units == "mbit/s":
+    if units == "gbit/s":
+        return speed * (1024 ** 3) / 8
+    elif units == "mbit/s":
         return speed * (1024 ** 2) / 8
     elif units == "kbit/s":
         return speed * 1024 / 8
@@ -100,6 +102,7 @@ class DownloadTimeCalculator(QWidget):
         self.speedMB = QRadioButton("MB/s")
         self.speedKB = QRadioButton("KB/s")
         self.speedB = QRadioButton("B/s")
+        self.speedGbit = QRadioButton("GBit/s")
         self.speedMbit = QRadioButton("MBit/s")
         self.speedKbit = QRadioButton("KBit/s")
         self.speedBit = QRadioButton("Bit/s")
@@ -108,6 +111,7 @@ class DownloadTimeCalculator(QWidget):
         self.speedGroup.addButton(self.speedMB)
         self.speedGroup.addButton(self.speedKB)
         self.speedGroup.addButton(self.speedB)
+        self.speedGroup.addButton(self.speedGbit)
         self.speedGroup.addButton(self.speedMbit)
         self.speedGroup.addButton(self.speedKbit)
         self.speedGroup.addButton(self.speedBit)
@@ -164,6 +168,7 @@ class DownloadTimeCalculator(QWidget):
         speedUnitLayout.addWidget(self.speedMB)
         speedUnitLayout.addWidget(self.speedKB)
         speedUnitLayout.addWidget(self.speedB)
+        speedUnitLayout.addWidget(self.speedGbit)
         speedUnitLayout.addWidget(self.speedMbit)
         speedUnitLayout.addWidget(self.speedKbit)
         speedUnitLayout.addWidget(self.speedBit)
@@ -212,7 +217,7 @@ class DownloadTimeCalculator(QWidget):
             size = float(self.sizeLabelInput.text())
             sizeUnit = self.sizeTB.text() if self.sizeTB.isChecked() else self.sizeGB.text() if self.sizeGB.isChecked() else self.sizeMB.text() if self.sizeMB.isChecked() else self.sizeKB.text() if self.sizeKB.isChecked() else self.sizeB.text()
             speed = float(self.speedLabelInput.text())
-            speedUnit = self.speedMB.text() if self.speedMB.isChecked() else self.speedKB.text() if self.speedKB.isChecked() else self.speedB.text() if self.speedB.isChecked() else self.speedMbit.text() if self.speedMbit.isChecked() else self.speedKbit.text() if self.speedKbit.isChecked() else self.speedBit.text()
+            speedUnit = self.speedMB.text() if self.speedMB.isChecked() else self.speedKB.text() if self.speedKB.isChecked() else self.speedB.text() if self.speedB.isChecked() else self.speedGbit.text() if self.speedGbit.isChecked() else self.speedMbit.text() if self.speedMbit.isChecked() else self.speedKbit.text() if self.speedKbit.isChecked() else self.speedBit.text()
         except ValueError:
             self.Result.setText(
                 "<font color='red'>Please enter a valid value.</font>")
