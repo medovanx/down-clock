@@ -1,8 +1,10 @@
 # Down Clock
 
-A PyQt5 desktop application to calculate download times based on file size and internet speed.
+A PyQt5 desktop application to calculate download time based on file size and internet speed.
 
-![Down Clock Logo](https://i.ibb.co/RTYT6b0g/ico.png)
+<div align="center">
+    <img src="https://i.ibb.co/RTYT6b0g/ico.png" width="40%">
+</div>
 
 ## Screenshot
 <div style="display: flex; justify-content: space-between;">
@@ -20,17 +22,20 @@ A PyQt5 desktop application to calculate download times based on file size and i
 ## Installation
 
 1. **Clone the repository**:
+
 ```bash
 git clone https://github.com/medovanx/down-clock.git
 cd down-clock
 ```
 
 2. **Install dependencies**:
+
 ```bash
 pip install -r requirements.txt
 ```
 
 3. **Run the application**:
+
 ```bash
 python main.py
 ```
@@ -64,6 +69,3 @@ This project is licensed under the MIT License.
 ## Author
 
 **Mohamed Darwesh** - [@medovanx](https://github.com/medovanx)
-
-
-
