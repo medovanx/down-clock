@@ -1,5 +1,26 @@
-*.ico
-*.ini
-/build
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+
+# PyInstaller
+*.spec
+
+# Virtual environments
+.venv
+
+# IDE
 .vscode/
-.venv/
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

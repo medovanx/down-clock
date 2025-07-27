@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+    <widget class="QMainWindow" name="MainWindow">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>450</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="windowTitle">
+     <string>Down Clock</string>
+    </property>
+    <property name="styleSheet">
+     <string>QMainWindow {
+     background-color: #1a4a5a;
+     color: #ffffff;
+     }</string>
+    </property>
+        <property name="minimumSize">
+      <size>
+       <width>450</width>
+       <height>480</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>450</width>
+       <height>480</height>
+      </size>
+     </property>
+     <widget class="QWidget" name="centralwidget">
+    <property name="styleSheet">
+     <string>QWidget {
+     background-color: #1a4a5a;
+     color: #ffffff;
+     }</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <property name="bottomMargin">
+      <number>20</number>
+     </property>
+     <property name="spacing">
+      <number>8</number>
+     </property>
+    <item>
+     <widget class="QLabel" name="sizeLabel">
+      <property name="text">
+       <string>File Size</string>
+      </property>
+      <property name="styleSheet">
+       <string>QLabel {font-weight: bold; font-size: 15px; font-family: Tahoma; color: #60a5fa; background-color: transparent;}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="sizeLabelInput">
+      <property name="placeholderText">
+       <string>Enter file size</string>
+      </property>
+      <property name="styleSheet">
+       <string>QLineEdit {padding: 6px;font-size: 11px;border-width: 1px;border-color: #257684;background-color: #2a5a6a;color: #ffffff;border-style: solid;border-radius: 4px;}QLineEdit:focus {border-color: #3a8a9a;background-color: #2f6a7a;}</string>
+      </property>
+     </widget>
+    </item>
+         <item>
+      <layout class="QHBoxLayout" name="sizeUnitLayout">
+       <item>
+        <widget class="QLabel" name="sizeUnitLabel">
+         <property name="text">
+          <string>Unit:</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {font-weight: bold; font-size: 12px; font-family: Tahoma; color: #60a5fa; background-color: transparent;}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="sizeUnitCombo">
+         <property name="minimumWidth">
+          <number>80</number>
+         </property>
+         <property name="styleSheet">
+          <string>QComboBox {padding: 6px;font-size: 11px;border-width: 1px;border-color: #257684;background-color: #2a5a6a;color: #ffffff;border-style: solid;border-radius: 4px;}QComboBox:focus {border-color: #3a8a9a;background-color: #2f6a7a;}QComboBox::drop-down {border: none;}QComboBox::down-arrow {image: none;border-left: 5px solid transparent;border-right: 5px solid transparent;border-top: 5px solid #257684;}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>TB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>KB</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    <item>
+     <widget class="QLabel" name="speedLabel">
+      <property name="text">
+       <string>Download Speed</string>
+      </property>
+      <property name="styleSheet">
+       <string>QLabel {font-weight: bold; font-size: 15px; font-family: Tahoma; color: #60a5fa; background-color: transparent;}</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="speedLabelHint">
+      <property name="text">
+       <string>Click the speed test button to automatically set the value</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="speedLabelInput">
+      <property name="placeholderText">
+       <string>Enter download speed</string>
+      </property>
+      <property name="styleSheet">
+       <string>QLineEdit {padding: 6px;font-size: 11px;border-width: 1px;border-color: #257684;background-color: #2a5a6a;color: #ffffff;border-style: solid;border-radius: 4px;}QLineEdit:focus {border-color: #3a8a9a;background-color: #2f6a7a;}</string>
+      </property>
+     </widget>
+    </item>
+         <item>
+      <layout class="QHBoxLayout" name="speedUnitLayout">
+       <item>
+        <widget class="QLabel" name="speedUnitLabel">
+         <property name="text">
+          <string>Unit:</string>
+         </property>
+         <property name="styleSheet">
+          <string>QLabel {font-weight: bold; font-size: 12px; font-family: Tahoma; color: #60a5fa; background-color: transparent;}</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="speedUnitCombo">
+         <property name="minimumWidth">
+          <number>80</number>
+         </property>
+         <property name="styleSheet">
+          <string>QComboBox {padding: 6px;font-size: 11px;border-width: 1px;border-color: #257684;background-color: #2a5a6a;color: #ffffff;border-style: solid;border-radius: 4px;}QComboBox:focus {border-color: #3a8a9a;background-color: #2f6a7a;}QComboBox::drop-down {border: none;}QComboBox::down-arrow {image: none;border-left: 5px solid transparent;border-right: 5px solid transparent;border-top: 5px solid #257684;}</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>MB/s</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>KB/s</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>B/s</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>GBit/s</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>MBit/s</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>KBit/s</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bit/s</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+         <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="buttonLayout">
+       <item>
+        <widget class="QPushButton" name="CalculateButton">
+         <property name="minimumHeight">
+          <number>35</number>
+         </property>
+         <property name="text">
+          <string>Calculate</string>
+         </property>
+         <property name="styleSheet">
+          <string>QPushButton {
+     color: #FFFFFF;
+     font-family: Verdana;
+     font-size: 13px;
+     font-weight: bold;
+     padding: 8px 16px;
+     background-color: #257684;
+     border-radius: 8px;
+     border: none;
+     }
+QPushButton:hover {
+     background:#3a8a9a;
+     }
+QPushButton:pressed {
+     background:#1a4a5a;
+     }</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="testSpeedButton">
+         <property name="minimumHeight">
+          <number>35</number>
+         </property>
+         <property name="text">
+          <string>Speed Test</string>
+         </property>
+         <property name="toolTip">
+          <string>Click to test your internet speed</string>
+         </property>
+         <property name="styleSheet">
+          <string>QPushButton {
+     color: #FFFFFF;
+     font-family: Verdana;
+     font-size: 13px;
+     font-weight: bold;
+     padding: 8px 16px;
+     background-color: #2a5a6a;
+     border-radius: 8px;
+     border: none;
+     }
+QPushButton:hover {
+     background: #3a8a9a;
+     }
+QPushButton:pressed {
+     background: #1a4a5a;
+     }</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+         <item>
+             <widget class="QLabel" name="Result">
+        <property name="minimumHeight">
+         <number>80</number>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>1</verstretch>
+         </sizepolicy>
+        </property>
+       <property name="text">
+        <string>Enter values and click Calculate to see download time...</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+               <property name="styleSheet">
+         <string>QLabel {
+     font-weight: bold; 
+     font-size: 14px; 
+     font-family: Tahoma;
+     padding: 12px;
+     border: 2px solid #257684;
+     border-radius: 8px;
+     background: qlineargradient(x1:0, y1:0, x2:0, y2:1, stop:0 #2a5a6a, stop:1 #1a4a5a);
+     color: #ffffff;
+     }</string>
+        </property>
+      </widget>
+     </item>
+        </layout>
+   </widget>
+   <widget class="QMenuBar" name="menubar">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>400</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string>QMenuBar {
+     background-color: #1a4a5a;
+     color: #ffffff;
+     border-bottom: 1px solid #257684;
+     }
+QMenuBar::item {
+     background-color: transparent;
+     padding: 4px 8px;
+     }
+QMenuBar::item:selected {
+     background-color: #257684;
+     }</string>
+    </property>
+    <widget class="QMenu" name="menuHelp">
+     <property name="title">
+      <string>Help</string>
+     </property>
+     <addaction name="actionAbout"/>
+    </widget>
+    <addaction name="menuHelp"/>
+   </widget>
+   <widget class="QStatusBar" name="statusbar"/>
+   <action name="actionAbout">
+    <property name="text">
+     <string>About</string>
+    </property>
+   </action>
+  </widget>
+  <resources/>
+  <connections/>
+ </ui> 

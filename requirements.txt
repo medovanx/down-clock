@@ -1,2 +1,4 @@
-PyQt5==5.15.9
-speedtest-cli==2.1.3
+PyQt5==5.15.9 # For the UI
+speedtest-cli==2.1.3 # For speed test
+pyinstaller==6.14.2 # For building the executable
+Pillow==11.3.0 # For icon generation, since we are using a png file

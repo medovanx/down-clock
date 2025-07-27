@@ -1,23 +1,69 @@
-<div align="center">
-  
-#  Download Time Calculator
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![PyPI version](https://img.shields.io/pypi/pyversions/spotDL?color=%2344CC11&style=flat-square)](https://www.python.org/)
+# Down Clock
 
-A PyQt5 based GUI application that calculates the estimated time it will take to download a file given the file size and download speed.
+A PyQt5 desktop application to calculate download times based on file size and internet speed.
+
+![Down Clock Logo](https://i.ibb.co/RTYT6b0g/ico.png)
+
+## Screenshot
+<div style="display: flex; justify-content: space-between;">
+    <img src="https://i.ibb.co/vCvKxHPj/image.png" alt="Down Clock Screenshot 1" width="48%">
+    <img src="https://i.ibb.co/V0GGGkVv/image.png" alt="Down Clock Screenshot 2" width="48%">
 </div>
 
-# Notes
-You can click on the Speed Test button and it will automatically input the value in the speed field, but it takes around 10 seconds, don't touch the window after clicking the button or else it might crash.
+## Features
 
-# GUI
-<p align="center">
-  <img src="https://i.imgur.com/pcpKLjE.png" width="49%">
-  <img src="https://i.imgur.com/QdkXsds.png" width="49%">
-</p>
+- Calculate download times for various file sizes (B, KB, MB, GB, TB)
+- Support for multiple speed units (Bit/s, KBit/s, MBit/s, GBit/s, B/s, KB/s, MB/s)
+- Built-in internet speed test functionality
+- Modern and intuitive user interface
 
-# Authors
-- Mohamed Darwesh [@medovanx](https://github.com/medovanx)
+## Installation
+
+1. **Clone the repository**:
+```bash
+git clone https://github.com/medovanx/down-clock.git
+cd down-clock
+```
+
+2. **Install dependencies**:
+```bash
+pip install -r requirements.txt
+```
+
+3. **Run the application**:
+```bash
+python main.py
+```
+
+## Usage
+
+1. Enter the file size you want to download
+2. Select the appropriate size unit (B, KB, MB, GB, TB)
+3. Enter your download speed
+4. Select the speed unit (Bit/s, KBit/s, MBit/s, GBit/s, B/s, KB/s, MB/s)
+5. Click "Speed Test" to automatically measure your internet speed (optional)
+6. Click "Calculate" to see the estimated download time
+
+## Building Executable
+
+Install PyInstaller and build the executable:
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile --windowed --icon=src/resources/app_icon.png --add-data "src/ui/mainwindow.ui;src/ui" --add-data "src/resources/app_icon.png;src/resources" --name="Down Clock" main.py
+```
+
+The executable will be created in the `dist/` folder.
+
+**Note**: The `--add-data` flags are required to include the UI file and icon resources in the bundled executable.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Author
+
+**Mohamed Darwesh** - [@medovanx](https://github.com/medovanx)
 
 
 
